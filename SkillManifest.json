@@ -1,0 +1,90 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "fifa worldcup",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "WhereWFC",
+                    "slots": [],
+                    "samples": [
+                        "OU se déroulera la coupe du monde ",
+                        "Ou aura lieu la coupe du monde cette année"
+                    ]
+                },
+                {
+                    "name": "WhenWFC",
+                    "slots": [],
+                    "samples": [
+                        "Quand débute la coupe du monde ",
+                        "quand est le premier match ",
+                        "Quel est le premier match de la coupe du monde",
+                        "Quand démarre la coupe du monde"
+                    ]
+                },
+                {
+                    "name": "HowManyMatches",
+                    "slots": [],
+                    "samples": [
+                        "Combien de match",
+                        "Combien y aura t'il de rencontre"
+                    ]
+                },
+                {
+                    "name": "NextMatch",
+                    "slots": [
+                        {
+                            "name": "country",
+                            "type": "AMAZON.Country"
+                        }
+                    ],
+                    "samples": [
+                        "alexa demande à football world cup quel estle prochain match de la {country}",
+                        "Quand à lieu le prochain match de {country}",
+                        "Quel est le prochain match de l'équipe de {country}",
+                        "Quel est le prochain match"
+                    ]
+                },
+                {
+                    "name": "Channel",
+                    "slots": [
+                        {
+                            "name": "country",
+                            "type": "AMAZON.Country"
+                        }
+                    ],
+                    "samples": [
+                        "Sur quelle chaine regarder {country} {country}"
+                    ]
+                },
+                {
+                    "name": "WhenFinale",
+                    "slots": [],
+                    "samples": [
+                        "La finale se joue quand",
+                        "Quand aura lieu la finale"
+                    ]
+                },
+                {
+                    "name": "HowManyMatchesStill",
+                    "slots": [],
+                    "samples": [
+                        "Combien reste t'ils de matches "
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
