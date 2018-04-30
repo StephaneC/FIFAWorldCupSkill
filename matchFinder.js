@@ -27,6 +27,7 @@ var customIndexOf = function(array, searchElement, fromIndex) {
     }).indexOf(searchElement.toLowerCase(), fromIndex);
   };
 
+exports.getFuturMatches = getFuturMatches;
 
 /**
  * Find next match. 
