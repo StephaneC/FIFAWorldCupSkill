@@ -1,0 +1,72 @@
+{
+    "requestEnvelope": {
+        "version": "1.0",
+        "session": {
+            "new": true,
+            "sessionId": "amzn1.echo-api.session.5b1f9d5c-b608-4298-89db-80d870307a2a",
+            "application": {
+                "applicationId": "amzn1.ask.skill.dddd0e2b-82de-4973-aa67-b4b9a12d3344"
+            },
+            "user": {
+                "userId": "amzn1.ask.account.AFHO46MMAL3ZHTQWRFW76PN6XRQ6E7DN2UH7UN6L572TRLKBOHKVUV4CGBQDRV4FXPOZZQIALLNCK3SMMO7RCW6BQQGCM3TO3PTCVQ4HTH5SR3SS65WARDAQTEUJO5QFYTJI7XWQF35X5PM5CSTQ575ZYFMJZMCKQ3RJSNGQ5IMWMRL3BL3M2BU4X3JD5GQPIQE5D3EMXBKJAOA"
+            }
+        },
+        "context": {
+            "AudioPlayer": {
+                "playerActivity": "IDLE"
+            },
+            "Display": {
+                "token": ""
+            },
+            "System": {
+                "application": {
+                    "applicationId": "amzn1.ask.skill.dddd0e2b-82de-4973-aa67-b4b9a12d3344"
+                },
+                "user": {
+                    "userId": "amzn1.ask.account.AFHO46MMAL3ZHTQWRFW76PN6XRQ6E7DN2UH7UN6L572TRLKBOHKVUV4CGBQDRV4FXPOZZQIALLNCK3SMMO7RCW6BQQGCM3TO3PTCVQ4HTH5SR3SS65WARDAQTEUJO5QFYTJI7XWQF35X5PM5CSTQ575ZYFMJZMCKQ3RJSNGQ5IMWMRL3BL3M2BU4X3JD5GQPIQE5D3EMXBKJAOA"
+                },
+                "device": {
+                    "deviceId": "amzn1.ask.device.AFRLEODUH6YXC5MXSK7XLXU5K66B3LEWPKGAMFBO2YIBKZ6UNXAGTRLBBHLMRMPMU4L2DWXE3D3SWBZQRK4FAPSI3XBNA4OOJMICQIQ6TZCARA6PFOTGTJONR2D4NXYNJMEKM3ZKTFPUM7VZMLKAD6YHXR6A",
+                    "supportedInterfaces": {
+                        "AudioPlayer": {},
+                        "Display": {
+                            "templateVersion": "1.0",
+                            "markupVersion": "1.0"
+                        }
+                    }
+                },
+                "apiEndpoint": "https://api.eu.amazonalexa.com",
+                "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmRkZGQwZTJiLTgyZGUtNDk3My1hYTY3LWI0YjlhMTJkMzM0NCIsImV4cCI6MTUyNTA4MzA5NCwiaWF0IjoxNTI1MDc5NDk0LCJuYmYiOjE1MjUwNzk0OTQsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUZSTEVPRFVINllYQzVNWFNLN1hMWFU1SzY2QjNMRVdQS0dBTUZCTzJZSUJLWjZVTlhBR1RSTEJCSExNUk1QTVU0TDJEV1hFM0QzU1dCWlFSSzRGQVBTSTNYQk5BNE9PSk1JQ1FJUTZUWkNBUkE2UEZPVEdUSk9OUjJENE5YWU5KTUVLTTNaS1RGUFVNN1ZaTUxLQUQ2WUhYUjZBIiwidXNlcklkIjoiYW16bjEuYXNrLmFjY291bnQuQUZITzQ2TU1BTDNaSFRRV1JGVzc2UE42WFJRNkU3RE4yVUg3VU42TDU3MlRSTEtCT0hLVlVWNENHQlFEUlY0RlhQT1paUUlBTExOQ0szU01NTzdSQ1c2QlFRR0NNM1RPM1BUQ1ZRNEhUSDVTUjNTUzY1V0FSREFRVEVVSk81UUZZVEpJN1hXUUYzNVg1UE01Q1NUUTU3NVpZRk1KWk1DS1EzUkpTTkdRNUlNV01STDNCTDNNMkJVNFgzSkQ1R1FQSVFFNUQzRU1YQktKQU9BIn19.Rc0r8-p34F9HDMxMzVcAikOa4h4eNeoDP0jpzAmVwv45n9sBmJm6M0o-hZV_GRUZya9p9C9sz_Q9xSpJBTigany9TN7Sf84nbTFfwQKpf6Pb0QhE3R1_22KrQ6gD3u84c_YIk6r9VNxW7KQVUyLIYSYqdkpzbIzJfkr6QBpWN4JubQFgJMkAeFJEcBEw9m0ynlIcqNmSiIxPgpMYJvVlnkxgz1O9FH7dpSSMRnmYFbcSa_rAlXWfhh81AhfjHVLxIJc9i3c27UMzgzA0XxZkz4Q4m5jsK-t_x41uk6eP0gSdrxIzYnlBN2mt_ldiALojIIQAWehkIRFdIPqHkBcMCQ"
+            }
+        },
+        "request": {
+            "type": "IntentRequest",
+            "requestId": "amzn1.echo-api.request.f14c6f86-86f3-46bd-9746-8080b8ea3064",
+            "timestamp": "2018-04-30T09:11:34Z",
+            "locale": "fr-FR",
+            "intent": {
+                "name": "NextMatch",
+                "confirmationStatus": "NONE",
+                "slots": {
+                    "country": {
+                        "name": "country",
+                        "confirmationStatus": "NONE"
+                    }
+                }
+            }
+        }
+    },
+    "context": {
+        "callbackWaitsForEmptyEventLoop": true,
+        "logGroupName": "/aws/lambda/Timezone2",
+        "logStreamName": "2018/04/30/[$LATEST]85b246c40939445d8575ac5c50cd6552",
+        "functionName": "Timezone2",
+        "memoryLimitInMB": "128",
+        "functionVersion": "$LATEST",
+        "invokeid": "7ace038f-4c56-11e8-ac7b-23439d1b6817",
+        "awsRequestId": "7ace038f-4c56-11e8-ac7b-23439d1b6817",
+        "invokedFunctionArn": "arn:aws:lambda:eu-west-1:868707612440:function:Timezone2"
+    },
+    "attributesManager": {},
+    "responseBuilder": {}
+}

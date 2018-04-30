@@ -1,0 +1,19 @@
+{
+  "name": "Football World Cup Skill",
+  "private": false,
+  "version": "0.0.1",
+  "description": "Alexa skill for FIFA World Cup 2018",
+  "author": "Stéphane Castrec <freelance@stephanecastrec.fr>",
+  "dependencies": {
+    "ask-sdk-core": "^2.0.2",
+    "ask-sdk-model": "^1.0.2",
+    "aws-sdk": "^2.5.5",
+    "moment": "^2.22.1"
+  },
+  "scripts": {
+    "start": "node main.js"
+  },
+  "devDependencies": {
+    "mocha": "^5.1.1"
+  }
+}
