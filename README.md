@@ -10,6 +10,12 @@ With this skill, you can ask informations abot FIFA Worldcup 2018.
 * Quand se joue le prochain match de l'équipe de France ? 
 * Quand se joue la finale?
 
+## Structure
+* [data](./data) : Folder that contains FIFA Worldcup data
+* [test](./test) : Lambda tests folder used by mocha
+* [SkillManifest.json](./SkillManifest.json) : Skill to import in Alexa console
+* Other files : Lambda function. [index.html](index.html) is the input. 
+
 ## Testing
 ### AWS Testing
 In the AWS Lambda page you will find *events tests*. Every function in your lambda HAVE TO be tested this way. It enables developers to :
