@@ -2,9 +2,7 @@
 
 With this skill, you can ask informations abot FIFA Worldcup 2018.
 
-##
-
-## Functionnalities
+## Functionalities
 * Où se déroule la coupe du monde ? 
 * Quand début la coupe du monde ?
 * Combien de matches se dérouleront à la coupe du monde ? 
@@ -57,5 +55,6 @@ describe( 'nextMatch', function() {
 1. Add more skills
 2. Add english version
 3. Suivi des scores
+3. Extends lambda to be able to respond to Facebook messenger and Google Home.
 
 
