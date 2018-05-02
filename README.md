@@ -6,7 +6,8 @@ With this skill, you can ask informations abot FIFA Worldcup 2018.
 * Où se déroule la coupe du monde ? 
 * Quand début la coupe du monde ?
 * Combien de matches se dérouleront à la coupe du monde ? 
-* Combien de match restent ils ? (TODO)
+* Combien de match restent ils ?
+* Combien de match restent pour la france ?
 * Quand se joue le prochain match de l'équipe de France ? 
 * Quand se joue la finale?
 

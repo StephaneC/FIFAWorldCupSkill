@@ -151,6 +151,38 @@ const HowManyMatches = {
   },
 };
 
+const HowManyMatchesStill = {
+  canHandle(handlerInput) {
+    console.log("Inside HowManyMatchesStill");
+    const attributes = handlerInput.attributesManager.getSessionAttributes();
+    const request = handlerInput.requestEnvelope.request;
+
+    return request.type === `IntentRequest` && 
+              request.intent.name === 'HowManyMatchesStill';
+  },
+  handle(handlerInput) {
+    const request = handlerInput.requestEnvelope.request;
+    let country = null;
+
+    if(request.intent.slots && request.intent.slots.country && 
+        request.intent.slots.country.value){
+        country = request.intent.slots.country.value;
+    }
+    let msg;
+    if(!country){
+      msg = messages.nbMatchLeftMessage(messages.NbMatches - matchFinder.getPassedMatches());
+    } else {
+      let matches = matchFinder.getFuturMatches(country);
+      msg = messages.nbMatchForCountryMessage(country, matches.length);
+    }
+  
+    return handlerInput.responseBuilder
+      .speak(msg)
+      .reprompt(msg)
+      .getResponse();
+  },
+};
+
 const WhenFinale = {
   canHandle(handlerInput) {
     console.log("Inside ExitHandler");
@@ -180,13 +212,11 @@ const NextMatch = {
   handle(handlerInput) {
     const request = handlerInput.requestEnvelope.request;
     let country = null;
-    console.log("will find match " + JSON.stringify(request.intent))
     if(request.intent.slots && request.intent.slots.country && 
       request.intent.slots.country.value){
         country = request.intent.slots.country.value;
-      }
+    }
     let match = matchFinder.nextMatch(country);
-    console.log("found match " + match.match)
     let msg = messages.nextMatchMessage(match);
     return handlerInput.responseBuilder
       .speak(msg)
@@ -204,6 +234,7 @@ exports.handler = skillBuilder
     WhenFinale,
     HowManyMatches,
     NextMatch,
+    HowManyMatchesStill,
     HelpHandler,
     ExitHandler,
     SessionEndedRequestHandler

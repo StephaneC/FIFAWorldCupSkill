@@ -34,3 +34,29 @@ describe( 'nextMatch', function() {
         expect(m).to.be.null;
     });
 });
+
+describe( 'getFuturMatches', function() {
+    it( `getFuturMatches ok`, function() {
+        let m = matchFinder.getFuturMatches();
+        expect(m).to.not.be.null;
+    });
+
+    it( `nextMatch ok country`, function() {
+        let m = matchFinder.getFuturMatches('France');
+        expect(m.length).to.equal(3);    
+    });
+
+
+    it( `nextMatch not found country`, function() {
+        let m = matchFinder.getFuturMatches('dummy');
+        expect(m.length).to.equal(0);    
+    });
+});
+
+
+describe( 'getPassedMatches', function() {
+    it( `getFuturMatches ok`, function() {
+        let m = matchFinder.getPassedMatches();
+        expect(m.length).to.equal(0);
+    });
+});

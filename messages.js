@@ -23,3 +23,14 @@ exports.nextMatchMessage = function nextMatchMessage(match){
         return "Aucun match n'a été trouvé."
     }
 };
+
+exports.nbMatchForCountryMessage = function(country, nbMatchs){
+    let msg = "Il reste au moins " + nbMatchs + " matches à jouer pour l'équipe de " + country;
+    if(nbMatchs > 0)
+    msg = msg+ ". Bonne chance à eux.";
+    return msg
+}
+
+exports.nbMatchLeftMessage = function(nbMatchs){
+    return "Il reste " + nbMatchs + " à jouer.";
+}

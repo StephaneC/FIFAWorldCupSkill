@@ -1,6 +1,16 @@
 const moment = require('moment')
 const groups = require('./data/groups.json') 
 
+var checkTeamName = function(country, match){
+    if(country) {
+        if(customIndexOf(match.teams, country) != -1){
+            return match;
+        }
+    } else {
+        return match;
+    }
+}
+
 var getAllMatches = function(){
     let matches = []
     Object.keys(groups).forEach(function(key) {
@@ -9,16 +19,34 @@ var getAllMatches = function(){
     return matches;
 };
 
-var getFuturMatches = function(){
+var getFuturMatches = function(country){
     let matches = getAllMatches();
     let d = moment();
     let futur = [];
     matches.forEach(function(m){
         if(moment(m.date, "DD MM YYYY").isSameOrAfter(d, 'hour')){
-            futur.push(m);
+            let found = checkTeamName(country, m)
+            if(found){
+                futur.push(found);
+            }
         }    
     });
     return futur; 
+}
+
+var getPassedMatches = function(country){
+    let matches = getAllMatches();
+    let d = moment();
+    let passed = [];
+    matches.forEach(function(m){
+        if(moment(m.date, "DD MM YYYY").isBefore(d, 'hour')){
+            let found = checkTeamName(country, m)
+            if(found){
+                passed.push(found);
+            }        
+        }    
+    });
+    return passed; 
 }
 
 var customIndexOf = function(array, searchElement, fromIndex) {
@@ -28,6 +56,7 @@ var customIndexOf = function(array, searchElement, fromIndex) {
   };
 
 exports.getFuturMatches = getFuturMatches;
+exports.getPassedMatches = getPassedMatches;
 
 /**
  * Find next match. 
@@ -35,19 +64,13 @@ exports.getFuturMatches = getFuturMatches;
  * @param {country} country 
  */
 exports.nextMatch = function nextMatch(country){
-    let matches = getFuturMatches();
+    let matches = getFuturMatches(country);
     let match = {
         match : 1000
     };
     matches.forEach(function(m){
         if(m.match < match.match){
-            if(!country){
-                match = m;
-            } else {
-                if(customIndexOf(m.teams, country) != -1){
-                    match = m;
-                }
-            }
+            match = m;
         }
     });
     if(match.match == 1000) {
