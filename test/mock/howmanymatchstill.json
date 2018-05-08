@@ -44,7 +44,7 @@
 		"timestamp": "2018-04-30T13:10:36Z",
 		"locale": "fr-FR",
 		"intent": {
-			"name": "HowManyMatchesStill",
+			"name": "HomManyMatchesLeft",
 			"confirmationStatus": "NONE",
 			"slots": {
 				"country": {

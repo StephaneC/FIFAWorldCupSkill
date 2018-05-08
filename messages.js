@@ -13,6 +13,13 @@ exports.WhenWFC = "La coupe du monde débute le 14 juin 2018 par le match du gro
 exports.HowManyMatches = "Il y aura 64 pour cette coupe du monde dont 24 durand les matches de groupes";
 
 exports.WhenFinale = "La finale aura lieu le 15 Juillet à Moscou.";
+
+exports.ContinueMessage = "Vous souhaitez connaitre autre chose sur cette cope du monde 2018?"
+exports.HelpMessage = "Envie de connaitre le prochain match? Demandez!"
+exports.ExitSkillMessage = "A bientôt"
+exports.WelcomeMessage = "Bienvenue dans votre assistant de coupe du monde."
+
+
 moment.locale('fr');
 
 exports.nextMatchMessage = function nextMatchMessage(match){

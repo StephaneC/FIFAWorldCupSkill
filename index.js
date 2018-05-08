@@ -4,9 +4,7 @@ const matchFinder = require('./matchFinder.js');
 const skillBuilder = Alexa.SkillBuilders.custom();
 
 const skillId = "amzn1.ask.skill.dddd0e2b-82de-4973-aa67-b4b9a12d3344";
-const welcomeMessage = "Bienvenue dans votre assistant de coupe du monde."
-const helpMessage = "Envie de connaitre le prochain match? Demandez!"
-const exitSkillMessage = "A bientôt"
+
 
 
 const LaunchRequestHandler = {
@@ -15,8 +13,8 @@ const LaunchRequestHandler = {
   },
   handle(handlerInput) {
     return handlerInput.responseBuilder
-      .speak(welcomeMessage)
-      .reprompt(helpMessage)
+      .speak(messages.WelcomeMessage)
+      .reprompt(messages.HelpMessage)
       .getResponse();
   },
 };
@@ -32,27 +30,11 @@ const ErrorHandler = {
     console.log(`Handler Input: ${JSON.stringify(handlerInput)}`);
 
     return handlerInput.responseBuilder
-      .speak('Error ' + helpMessage)
+      .speak(messages.HelpMessage)
       .getResponse();
   },
 };
 
-const WhatTimeHandler = {
-  canHandle(handlerInput) {
-    console.log("Inside HelpHandler");
-    const request = handlerInput.requestEnvelope.request;
-    return request.type === 'IntentRequest' &&
-           request.intent.name === 'whattimeatxxx';
-  },
-  handle(handlerInput) {
-    console.log("Inside HelpHandler - handle");
-    var d = new Date();
-    return handlerInput.responseBuilder
-      .speak("Il est " + d.getHours() + " heures et " + d.getMinutes() + " minutes")
-      .getResponse();
-  },
-    
-};
 
 const HelpHandler = {
   canHandle(handlerInput) {
@@ -64,8 +46,8 @@ const HelpHandler = {
   handle(handlerInput) {
     console.log("Inside HelpHandler - handle");
     return handlerInput.responseBuilder
-      .speak(helpMessage)
-      .reprompt(helpMessage)
+      .speak(messages.HelpMessage)
+      .reprompt(messages.HelpMessage)
       .getResponse();
   },
 };
@@ -95,7 +77,7 @@ const ExitHandler = {
   },
   handle(handlerInput) {
     return handlerInput.responseBuilder
-      .speak(exitSkillMessage)
+      .speak(messages.ExitSkillMessage)
       .getResponse();
   },
 };
@@ -112,7 +94,7 @@ const WhereWFC = {
   handle(handlerInput) {
     return handlerInput.responseBuilder
       .speak(messages.WhereWFC)
-      .reprompt(messages.WhereWFC)
+      .reprompt(messages.ContinueMessage)
       .getResponse();
   },
 };
@@ -129,7 +111,7 @@ const WhenWFC = {
   handle(handlerInput) {
     return handlerInput.responseBuilder
       .speak(messages.WhenWFC)
-      .reprompt(messages.WhenWFC)
+      .reprompt(messages.ContinueMessage)
       .getResponse();
   },
 };
@@ -151,14 +133,14 @@ const HowManyMatches = {
   },
 };
 
-const HowManyMatchesStill = {
+const HomManyMatchesLeft = {
   canHandle(handlerInput) {
-    console.log("Inside HowManyMatchesStill");
+    console.log("Inside HomManyMatchesLeft");
     const attributes = handlerInput.attributesManager.getSessionAttributes();
     const request = handlerInput.requestEnvelope.request;
 
     return request.type === `IntentRequest` && 
-              request.intent.name === 'HowManyMatchesStill';
+              request.intent.name === 'HomManyMatchesLeft';
   },
   handle(handlerInput) {
     const request = handlerInput.requestEnvelope.request;
@@ -178,7 +160,7 @@ const HowManyMatchesStill = {
   
     return handlerInput.responseBuilder
       .speak(msg)
-      .reprompt(msg)
+      .reprompt(messages.ContinueMessage)
       .getResponse();
   },
 };
@@ -195,7 +177,7 @@ const WhenFinale = {
   handle(handlerInput) {
     return handlerInput.responseBuilder
       .speak(messages.WhenFinale)
-      .reprompt(messages.WhenFinale)
+      .reprompt(messages.ContinueMessage)
       .getResponse();
   },
 };
@@ -220,7 +202,7 @@ const NextMatch = {
     let msg = messages.nextMatchMessage(match);
     return handlerInput.responseBuilder
       .speak(msg)
-      .reprompt(msg)
+      .reprompt(messages.ContinueMessage)
       .getResponse();
   },
 };
@@ -234,7 +216,7 @@ exports.handler = skillBuilder
     WhenFinale,
     HowManyMatches,
     NextMatch,
-    HowManyMatchesStill,
+    HomManyMatchesLeft,
     HelpHandler,
     ExitHandler,
     SessionEndedRequestHandler

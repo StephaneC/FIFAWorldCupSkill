@@ -51,8 +51,8 @@ describe( 'nextMatch', function() {
 });
 
 
-describe( 'HowManyMatchesStill', function() {
-    it( `HowManyMatchesStill country ok`, function() {   
+describe( 'HomManyMatchesLeft', function() {
+    it( `HomManyMatchesLeft country ok`, function() {   
         return LambdaTester( myLambda.handler )
             .event(hhStillowManyMatchCountryMock)
             .expectResult( ( result ) => {
@@ -62,7 +62,7 @@ describe( 'HowManyMatchesStill', function() {
             }); 
     });
 
-    it( `HowManyMatchesStill no country ok`, function() {   
+    it( `HomManyMatchesLeft no country ok`, function() {   
         return LambdaTester( myLambda.handler )
             .event(hhStillowManyMatchMock)
             .expectResult( ( result ) => {
