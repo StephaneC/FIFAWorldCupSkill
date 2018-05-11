@@ -31,6 +31,7 @@ const ErrorHandler = {
 
     return handlerInput.responseBuilder
       .speak(messages.HelpMessage)
+      .reprompt(messages.HelpMessage)
       .getResponse();
   },
 };
@@ -128,7 +129,7 @@ const HowManyMatches = {
   handle(handlerInput) {
     return handlerInput.responseBuilder
       .speak(messages.HowManyMatches)
-      .reprompt(messages.HowManyMatches)
+      .reprompt(messages.ContinueMessage)
       .getResponse();
   },
 };

@@ -15,10 +15,9 @@ exports.HowManyMatches = "Il y aura 64 pour cette coupe du monde dont 24 durand 
 exports.WhenFinale = "La finale aura lieu le 15 Juillet à Moscou.";
 
 exports.ContinueMessage = "Vous souhaitez connaitre autre chose sur cette cope du monde 2018?"
-exports.HelpMessage = "Envie de connaitre le prochain match? Demandez!"
+exports.HelpMessage = "Envie de connaitre le prochain match d'une équipe vous pouvez demande Quand est le prochain match de l'équipe de France? Demandez!"
 exports.ExitSkillMessage = "A bientôt"
-exports.WelcomeMessage = "Bienvenue dans votre assistant de coupe du monde."
-
+exports.WelcomeMessage = "Bienvenue dans votre assistant de coupe du monde. Vous pouvez demande quand aura lieu le prochain match d'une équipe."
 
 moment.locale('fr');
 
