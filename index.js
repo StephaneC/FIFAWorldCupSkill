@@ -94,7 +94,7 @@ const WhereWFC = {
   },
   handle(handlerInput) {
     return handlerInput.responseBuilder
-      .speak(messages.WhereWFC)
+      .speak(messages.WhereWFC+ ". " + messages.ContinueMessage)
       .reprompt(messages.ContinueMessage)
       .getResponse();
   },
@@ -111,7 +111,7 @@ const WhenWFC = {
   },
   handle(handlerInput) {
     return handlerInput.responseBuilder
-      .speak(messages.WhenWFC)
+      .speak(messages.WhenWFC + ". " + messages.ContinueMessage)
       .reprompt(messages.ContinueMessage)
       .getResponse();
   },
@@ -128,7 +128,7 @@ const HowManyMatches = {
   },
   handle(handlerInput) {
     return handlerInput.responseBuilder
-      .speak(messages.HowManyMatches)
+      .speak(messages.HowManyMatches + ". " + messages.ContinueMessage)
       .reprompt(messages.ContinueMessage)
       .getResponse();
   },
@@ -160,7 +160,7 @@ const HomManyMatchesLeft = {
     }
   
     return handlerInput.responseBuilder
-      .speak(msg)
+      .speak(msg + ". " + messages.ContinueMessage)
       .reprompt(messages.ContinueMessage)
       .getResponse();
   },
@@ -177,7 +177,7 @@ const WhenFinale = {
   },
   handle(handlerInput) {
     return handlerInput.responseBuilder
-      .speak(messages.WhenFinale)
+      .speak(messages.WhenFinale + ". " + messages.ContinueMessage)
       .reprompt(messages.ContinueMessage)
       .getResponse();
   },
@@ -202,11 +202,42 @@ const NextMatch = {
     let match = matchFinder.nextMatch(country);
     let msg = messages.nextMatchMessage(match);
     return handlerInput.responseBuilder
-      .speak(msg)
+      .speak(msg + ". " + messages.ContinueMessage)
       .reprompt(messages.ContinueMessage)
       .getResponse();
   },
 };
+
+const Score = {
+  canHandle(handlerInput) {
+    console.log("Inside Score");
+    const attributes = handlerInput.attributesManager.getSessionAttributes();
+    const request = handlerInput.requestEnvelope.request;
+
+    return request.type === `IntentRequest` && 
+              request.intent.name === 'Score';
+  },
+  handle(handlerInput) {
+    const request = handlerInput.requestEnvelope.request;
+    let country = null;
+    let country2 = null;
+    if(request.intent.slots && request.intent.slots.country && 
+      request.intent.slots.country.value){
+        country = request.intent.slots.country.value;
+    }
+    if(request.intent.slots && request.intent.slots.country2 && 
+      request.intent.slots.country2.value){
+        country2 = request.intent.slots.country1.value;
+    }
+    let match = matchFinder.getScore(country, country2);
+    let msg = messages.getScore(match);
+    return handlerInput.responseBuilder
+      .speak(msg + ". " + messages.ContinueMessage)
+      .reprompt(messages.ContinueMessage)
+      .getResponse();
+  },
+};
+
 
 /* LAMBDA SETUP */
 exports.handler = skillBuilder
@@ -218,6 +249,7 @@ exports.handler = skillBuilder
     HowManyMatches,
     NextMatch,
     HomManyMatchesLeft,
+    Score,
     HelpHandler,
     ExitHandler,
     SessionEndedRequestHandler

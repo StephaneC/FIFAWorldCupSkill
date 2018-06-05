@@ -14,10 +14,10 @@ exports.HowManyMatches = "Il y aura 64 pour cette coupe du monde dont 24 durand 
 
 exports.WhenFinale = "La finale aura lieu le 15 Juillet à Moscou.";
 
-exports.ContinueMessage = "Vous souhaitez connaitre autre chose sur cette cope du monde 2018?"
-exports.HelpMessage = "Envie de connaitre le prochain match d'une équipe vous pouvez demande Quand est le prochain match de l'équipe de France? Demandez!"
+exports.ContinueMessage = "Vous souhaitez connaitre autre chose sur cette coupe du monde 2018?"
+exports.HelpMessage = "Envie de connaitre le prochain match d'une équipe? Vous pouvez par exemple demander quand est le prochain match de l'équipe de France? Demandez!"
 exports.ExitSkillMessage = "A bientôt"
-exports.WelcomeMessage = "Bienvenue dans votre assistant de coupe du monde. Vous pouvez demande quand aura lieu le prochain match d'une équipe."
+exports.WelcomeMessage = "Bienvenue dans votre assistant de coupe du monde. Vous pouvez demander quand aura lieu le prochain match d'une équipe"
 
 moment.locale('fr');
 
@@ -39,4 +39,27 @@ exports.nbMatchForCountryMessage = function(country, nbMatchs){
 
 exports.nbMatchLeftMessage = function(nbMatchs){
     return "Il reste " + nbMatchs + " à jouer.";
+}
+
+exports.getScore = function(match){
+    console.log("message.getScore");
+    console.log(match)
+    if(!match){
+        return "Je n'ai pas trouvé le match recherché."
+    }
+    if (match.score.length == 0){
+        return "Je ne connais pas encore le résultat de ce match. Je suis à la bourre ?"
+    }
+    if(match.score[0] > match.score[1]){
+        // gagnant equipe 0
+        return match.teams[0] + " a gagné face à " + match.teams[1] 
+            + ", " +  match.score[0] +" buts à " + match.score[1];
+    } else if(match.score[0] < match.score[1]){
+        return match.teams[1] + " a gagné face à " + match.teams[0] 
+            + ", " +  match.score[1] +" buts à " + match.score[0];
+    } else {
+        // egalité
+        return "le score " + match.teams[0] + " " + match.teams[1] +
+            "est de " + match.score[0] + " à " + match.score[1];  
+    }
 }

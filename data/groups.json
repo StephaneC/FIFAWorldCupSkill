@@ -14,7 +14,8 @@
                 "location" : "Stade Loujniki, Moscou",
                 "teams":["Russie","Arabie Saoudite"],
                 "tv":["TF1", "beIN Sports 1"],
-                "match" : "1"
+                "match" : "1",
+                "score": []
             },
             {
                 "date" : "15 06 2018",
@@ -22,7 +23,8 @@
                 "location" : "lekaterinbourg Arena, Iekaterinbourg",
                 "teams":["Egypte","Uruguay"],
                 "tv":["beIN Sports 1"],
-                "match" : "2"
+                "match" : "2",
+                "score": []
             },
             {
                 "date" : "19 06 2018",
@@ -30,7 +32,8 @@
                 "location" : "Stade Krestovski, Saint-Pétersbourg",
                 "teams":["Russie","Egypte"],
                 "tv":["beIN Sports 1"],
-                "match" : "17"
+                "match" : "17",
+                "score": []
             },
             {
                 "date" : "20 06 2018",
@@ -38,7 +41,8 @@
                 "location" : "Rostov Arena, Rostov-sur-le-Don",
                 "teams":["Uruguay","Arabie Saoudite"],
                 "tv":["beIN Sports 1"],
-                "match" : "18"
+                "match" : "18",
+                "score": []
             },
             {
                 "date" : "25 06 2018",
@@ -46,7 +50,8 @@
                 "location" : "Samara Arena, Samara",
                 "teams":["Uruguay","Russie"],
                 "tv":["beIN Sports 1"],
-                "match" : "33"
+                "match" : "33",
+                "score": []
             },
             {
                 "date" : "25 06 2018",
@@ -54,7 +59,8 @@
                 "location" : "Volgograd Arena, Volgograd",
                 "teams":["Egypte","Arabie Saoudite"],
                 "tv":[],
-                "match" : "34"
+                "match" : "34",
+                "score": []
             }
         ]
     },
@@ -73,7 +79,8 @@
                 "location" : "Stade Krestovski, Saint-Pétersbourg",
                 "teams":["Maroc","Iran"],
                 "tv":["beIN Sports 1"],
-                "match" : "3"
+                "match" : "3",
+                "score": []
             },
             {
                 "date" : "15 06 2018",
@@ -81,7 +88,8 @@
                 "location" : "Stade Ficht, Sotchi",
                 "teams":["Portugal","Espagne"],
                 "tv":["TF1", "beIN Sports 1"],
-                "match" : "4"
+                "match" : "4",
+                "score": []
             },
             {
                 "date" : "20 06 2018",
@@ -89,7 +97,8 @@
                 "location" : "Stade Loujniki, Moscou",
                 "teams":["Portugal","Maroc"],
                 "tv":["beIN Sports 1"],
-                "match" : "19"
+                "match" : "19",
+                "score": []
             },
             {
                 "date" : "20 06 2018",
@@ -97,7 +106,8 @@
                 "location" : "Kazan Arena, Kazan",
                 "teams":["Iran","Espagne"],
                 "tv":["beIN Sports 1"],
-                "match" : "20"
+                "match" : "20",
+                "score": []
             },
             {
                 "date" : "25 06 2018",
@@ -105,7 +115,8 @@
                 "location" : "Stade de Mordovie, Saransk",
                 "teams":["Iran","Portugal"],
                 "tv":[],
-                "match" : "35"
+                "match" : "35",
+                "score": []
             },
             {
                 "date" : "25 06 2018",
@@ -113,7 +124,8 @@
                 "location" : "Baltika Arena, Kaliningrad",
                 "teams":["Espagne","Maroc"],
                 "tv":[],
-                "match" : "36"
+                "match" : "36",
+                "score": []
             }
         ]
     },
@@ -132,7 +144,8 @@
                 "location" : "Kazan Arena, Kazan",
                 "teams":["France","Australie"],
                 "tv":["TF1", "beIN Sports 1"],
-                "match" : "5"
+                "match" : "5",
+                "score": []
             },
             {
                 "date" : "16 06 2018",
@@ -140,7 +153,8 @@
                 "location" : "Stade de Mordovie, Saransk",
                 "teams":["Pérou","Danemark"],
                 "tv":["beIN Sports 1"],
-                "match" : "6"
+                "match" : "6",
+                "score": []
             },
             {
                 "date" : "21 06 2018",
@@ -148,7 +162,8 @@
                 "location" : "Iekaterinbourg Arena, Iekaterinbourg",
                 "teams":["France","Pérou"],
                 "tv":["TF1", "beIN Sports 1"],
-                "match" : "21"
+                "match" : "21",
+                "score": []
             },
             {
                 "date" : "21 06 2018",
@@ -156,7 +171,8 @@
                 "location" : "Samara Arena, Samara",
                 "teams":["Danemark","Australie"],
                 "tv":["beIN Sports 1"],
-                "match" : "22"
+                "match" : "22",
+                "score": []
             },
             {
                 "date" : "16 06 2018",
@@ -164,7 +180,8 @@
                 "location" : "Stade Loujniki, Moscou",
                 "teams":["Danemark","France"],
                 "tv":["TF1", "beIN Sports 1"],
-                "match" : "37"
+                "match" : "37",
+                "score": []
             },
             {
                 "date" : "26 06 2018",
@@ -172,7 +189,8 @@
                 "location" : "Stade Ficht, Sotchi",
                 "teams":["Australie","Pérou"],
                 "tv":[],
-                "match" : "38"
+                "match" : "38",
+                "score": []
             }   
         ]
     },
@@ -191,7 +209,8 @@
                 "location" : "Stade du Spartak, Moscou",
                 "teams":["Argentine","Islande"],
                 "tv":["beIN Sports 1"],
-                "match" : "7"
+                "match" : "7",
+                "score": []
             },
             {
                 "date" : "16 06 2018",
@@ -199,7 +218,8 @@
                 "location" : "Baltika Arena, Kaliningrad",
                 "teams":["Croatie","Nigéria"],
                 "tv":["TF1","beIN Sports 1"],
-                "match" : "8"
+                "match" : "8",
+                "score": []
             },
             {
                 "date" : "21 06 2018",
@@ -207,7 +227,8 @@
                 "location" : "Stade de Nijni Novgorod, Nijni Novgorod",
                 "teams":["Croatie","Argentine"],
                 "tv":["TF1","beIN Sports 1"],
-                "match" : "23"
+                "match" : "23",
+                "score": []
             },
             {
                 "date" : "22 06 2018",
@@ -215,7 +236,8 @@
                 "location" : "Volgograd Arena, Volgograd",
                 "teams":["Islande","Nigéria"],
                 "tv":["TF1","beIN Sports 1"],
-                "match" : "24"
+                "match" : "24",
+                "score": []
             },
             {
                 "date" : "26 06 2018",
@@ -223,7 +245,8 @@
                 "location" : "Stade Krestovski, Saint-Pétersbourg",
                 "teams":["Argentine","Nigéria"],
                 "tv":[],
-                "match" : "39"
+                "match" : "39",
+                "score": []
             },
             {
                 "date" : "26 06 2018",
@@ -231,7 +254,8 @@
                 "location" : "Rostov Arena, Rostov-sur-le-Don",
                 "teams":["Croatie","Islande"],
                 "tv":[],
-                "match" : "40"
+                "match" : "40",
+                "score": []
             }            
         ]
     },
@@ -250,7 +274,8 @@
                 "location" : "Samara Arena, Samara",
                 "teams":["Serbie","Costa Rica"],
                 "tv":["beIN Sports 1"],
-                "match" : "9"
+                "match" : "9",
+                "score": []
             },
             {
                 "date" : "17 06 2018",
@@ -258,7 +283,8 @@
                 "location" : "Rostov Arena, Rostov-sur-le-Don",
                 "teams":["Brésil","Suisse"],
                 "tv":["TF1","beIN Sports 1"],
-                "match" : "10"
+                "match" : "10",
+                "score": []
             },
             {
                 "date" : "22 06 2018",
@@ -266,7 +292,8 @@
                 "location" : "Stade Krestovski, Saint-Pétersbourg",
                 "teams":["Brésil","Costa Rica"],
                 "tv":["TF1","beIN Sports 1"],
-                "match" : "25"
+                "match" : "25",
+                "score": []
             },
             {
                 "date" : "22 06 2018",
@@ -274,7 +301,8 @@
                 "location" : "Baltika Arena, Kaliningrad",
                 "teams":["Serbie","Suisse"],
                 "tv":["beIN Sports 1"],
-                "match" : "26"
+                "match" : "26",
+                "score": []
             },
             {
                 "date" : "27 06 2018",
@@ -282,7 +310,8 @@
                 "location" : "Stade du Spartak, Moscou",
                 "teams":["Serbie","Brésil"],
                 "tv":[],
-                "match" : "41"
+                "match" : "41",
+                "score": []
             },
             {
                 "date" : "27 06 2018",
@@ -290,7 +319,8 @@
                 "location" : "Stade de Nijni Novgorod, Nijni Novgorod",
                 "teams":["Suisse","Costa Rica"],
                 "tv":[],
-                "match" : "42"
+                "match" : "42",
+                "score": []
             }            
         ]
     },
@@ -309,7 +339,8 @@
                 "location" : "Stade Loujniki, Moscou",
                 "teams":["Allemagne","Mexique"],
                 "tv":["TF1","beIN Sports 1"],
-                "match" : "11"
+                "match" : "11",
+                "score": []
             },
             {
                 "date" : "18 06 2018",
@@ -317,7 +348,8 @@
                 "location" : "Stade de Nijni Novgorod, Nijni Novgorod",
                 "teams":["Suède","Corée du Sud"],
                 "tv":["TF1","beIN Sports 1"],
-                "match" : "12"
+                "match" : "12",
+                "score": []
             },
             {
                 "date" : "23 06 2018",
@@ -325,7 +357,8 @@
                 "location" : "Stade Ficht, Sotchi",
                 "teams":["Allemagne","Suède"],
                 "tv":["TF1","beIN Sports 1"],
-                "match" : "27"
+                "match" : "27",
+                "score": []
             },
             {
                 "date" : "22 06 2018",
@@ -333,7 +366,8 @@
                 "location" : "Rostov Arena, Rostov-sur-le-Don",
                 "teams":["Corée du Sud","Mexique"],
                 "tv":["beIN Sports 1"],
-                "match" : "28"
+                "match" : "28",
+                "score": []
             },
             {
                 "date" : "27 06 2018",
@@ -341,7 +375,8 @@
                 "location" : "Kazan Arena, Kazan",
                 "teams":["Corée du Sud","Allemagne"],
                 "tv":[],
-                "match" : "43"
+                "match" : "43",
+                "score": []
             },
             {
                 "date" : "27 06 2018",
@@ -349,7 +384,8 @@
                 "location" : "Iekaterinbourg Arena, Iekaterinbourg",
                 "teams":["Mexique","Suède"],
                 "tv":[],
-                "match" : "44"
+                "match" : "44",
+                "score": []
             }            
         ]
     },
@@ -368,7 +404,8 @@
                 "location" : "Stade Ficht, Sotchi",
                 "teams":["Belgique","Panama"],
                 "tv":["beIN Sports 1"],
-                "match" : "13"
+                "match" : "13",
+                "score": []
             },
             {
                 "date" : "18 06 2018",
@@ -376,7 +413,8 @@
                 "location" : "Volgograd Arena, Volgograd",
                 "teams":["Tunisie","Angleterre"],
                 "tv":["TF1","beIN Sports 1"],
-                "match" : "14"
+                "match" : "14",
+                "score": []
             },
             {
                 "date" : "23 06 2018",
@@ -384,7 +422,8 @@
                 "location" : "Stade du Spartak, Moscou",
                 "teams":["Belgique","Tunisie"],
                 "tv":["beIN Sports 1"],
-                "match" : "29"
+                "match" : "29",
+                "score": []
             },
             {
                 "date" : "24 06 2018",
@@ -392,7 +431,8 @@
                 "location" : "Stade de Nijni Novgorod, Nijni Novgorod",
                 "teams":["Angleterres","Panama"],
                 "tv":["beIN Sports 1"],
-                "match" : "30"
+                "match" : "30",
+                "score": []
             },
             {
                 "date" : "28 06 2018",
@@ -400,7 +440,8 @@
                 "location" : "Baltika Arena, Kaliningrad",
                 "teams":["Angleterres","Belgique"],
                 "tv":["beIN Sports 1"],
-                "match" : "45"
+                "match" : "45",
+                "score": []
             },
             {
                 "date" : "28 06 2018",
@@ -408,7 +449,8 @@
                 "location" : "Stade de Mordovie , Saransk",
                 "teams":["Panama","Tunisie"],
                 "tv":["beIN Sports 2"],
-                "match" : "46"
+                "match" : "46",
+                "score": []
             }           
         ]
     },
@@ -427,7 +469,8 @@
                 "location" : "Stade du Spartak, Moscou",
                 "teams":["Pologne","Sénégal"],
                 "tv":["beIN Sports 1"],
-                "match" : "15"
+                "match" : "15",
+                "score": []
             },
             {
                 "date" : "19 06 2018",
@@ -435,7 +478,8 @@
                 "location" : "Stade de Mordovie, Saransk",
                 "teams":["Colombie","Japon"],
                 "tv":["beIN Sports 1"],
-                "match" : "8"
+                "match" : "8",
+                "score": []
             },
             {
                 "date" : "24 06 2018",
@@ -443,7 +487,8 @@
                 "location" : "Kazan Arena, Kazan",
                 "teams":["Pologne","Colombie"],
                 "tv":[],
-                "match" : "31"
+                "match" : "31",
+                "score": []
             },
             {
                 "date" : "24 06 2018",
@@ -451,7 +496,8 @@
                 "location" : "Iekaterinbourg Arena, Iekaterinbourg",
                 "teams":["Japon","Sénégal"],
                 "tv":[],
-                "match" : "32"
+                "match" : "32",
+                "score": []
             },
             {
                 "date" : "28 06 2018",
@@ -459,7 +505,8 @@
                 "location" : "Volgograd Arena, Volgograd",
                 "teams":["Japon","Pologne"],
                 "tv":[],
-                "match" : "47"
+                "match" : "47",
+                "score": []
             },
             {
                 "date" : "28 06 2018",
@@ -467,7 +514,8 @@
                 "location" : "Samara Arena, Samara",
                 "teams":["Sénégale","Colombie"],
                 "tv":[],
-                "match" : "48"
+                "match" : "48",
+                "score": []
             }            
         ]
     }
