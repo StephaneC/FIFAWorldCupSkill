@@ -12,7 +12,8 @@ const hhStillowManyMatchMock = require('./mock/howmanymatchstill.1');
 
 const score = require('./mock/score.1');
 const score_one_country = require('./mock/score.1');
-/*
+const score_one_country_2 = require('./mock/score.2');
+
 
 describe( 'nextMatch', function() {
     it( `nextMatch country ok`, function() {    
@@ -73,7 +74,8 @@ describe( 'HomManyMatchesLeft', function() {
             }); 
     });
 });
-*/
+
+
 describe( 'Score', function() {
     it( `Score two countries`, function() {   
         return LambdaTester( myLambda.handler )
@@ -90,6 +92,16 @@ describe( 'Score', function() {
             .event(score_one_country)
             .expectResult( ( result ) => {
                 expect( result.response.outputSpeech.ssml).to.equal(
+                    "<speak>Je n\'ai pas trouvé le match recherché.. Vous souhaitez connaitre autre chose sur cette coupe du monde 2018?</speak>"
+                );
+            }); 
+    });
+
+    it( `score one country 2`, function() {   
+        return LambdaTester( myLambda.handler )
+            .event(score_one_country_2)
+            .expectResult( ( result ) => {
+                expect(result.response.outputSpeech.ssml).to.equal(
                     "<speak>Je n\'ai pas trouvé le match recherché.. Vous souhaitez connaitre autre chose sur cette coupe du monde 2018?</speak>"
                 );
             }); 

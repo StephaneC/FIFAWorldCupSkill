@@ -50,13 +50,16 @@ var getPassedMatches = function(country){
 }
 
 var getScore = function(country, country1){
+    if(!country){
+        country = country1;
+    }
    let matches = getPassedMatches(country);
    if(matches.length == 0){
        return null;
    }
    if(country1){
         // je parcours les matchs
-        for(match in matches){
+        for(var match in matches){
             if(checkTeamName(country1, match))
                 // match trouvé     
                 return match;            
@@ -64,7 +67,7 @@ var getScore = function(country, country1){
         return null;
    } else {
         var m = matches[0]
-        for (match in matches){
+        for (var match in matches){
             if(moment(match.date, "DD MM YYYY")
                 .isAfter(moment(m.date, "DD MM YYYY"))){
                     m = match

@@ -2,10 +2,22 @@ const Alexa = require('ask-sdk-core');
 const messages = require('./messages');
 const matchFinder = require('./matchFinder.js');
 const skillBuilder = Alexa.SkillBuilders.custom();
-
+const countries = require('./data/countries.json');
 const skillId = "amzn1.ask.skill.dddd0e2b-82de-4973-aa67-b4b9a12d3344";
-
-
+/**
+ * 
+ * @param {string} country 
+ */
+var getCountryFromIntent = function(country){
+  for(var i in countries){
+      if(country.toLowerCase().indexOf(countries[i].toLowerCase())!=-1){
+          // pays trouvé
+          console.log("trouvé")
+          return countries[i];
+      }
+  };
+  return null;
+} 
 
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
@@ -149,7 +161,7 @@ const HomManyMatchesLeft = {
 
     if(request.intent.slots && request.intent.slots.country && 
         request.intent.slots.country.value){
-        country = request.intent.slots.country.value;
+        country = getCountryFromIntent(request.intent.slots.country.value);
     }
     let msg;
     if(!country){
@@ -197,7 +209,7 @@ const NextMatch = {
     let country = null;
     if(request.intent.slots && request.intent.slots.country && 
       request.intent.slots.country.value){
-        country = request.intent.slots.country.value;
+        country = getCountryFromIntent(request.intent.slots.country.value);
     }
     let match = matchFinder.nextMatch(country);
     let msg = messages.nextMatchMessage(match);
@@ -221,16 +233,20 @@ const Score = {
     const request = handlerInput.requestEnvelope.request;
     let country = null;
     let country2 = null;
+    console.log("recherche des pays")
     if(request.intent.slots && request.intent.slots.country && 
       request.intent.slots.country.value){
-        country = request.intent.slots.country.value;
+        country = getCountryFromIntent(request.intent.slots.country.value);
     }
-    if(request.intent.slots && request.intent.slots.country2 && 
-      request.intent.slots.country2.value){
-        country2 = request.intent.slots.country1.value;
+    if(request.intent.slots && request.intent.slots.country_a && 
+      request.intent.slots.country_a.value){
+        country2 = getCountryFromIntent(request.intent.slots.country_a.value);
     }
+    console.log("Score: country: " + country + country2);
+
     let match = matchFinder.getScore(country, country2);
     let msg = messages.getScore(match);
+    console.log("Score:" + msg);
     return handlerInput.responseBuilder
       .speak(msg + ". " + messages.ContinueMessage)
       .reprompt(messages.ContinueMessage)
