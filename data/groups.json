@@ -15,7 +15,7 @@
                 "teams":["Russie","Arabie Saoudite"],
                 "tv":["TF1", "beIN Sports 1"],
                 "match" : "1",
-                "score": []
+                "score": [5,0]
             },
             {
                 "date" : "15 06 2018",
@@ -24,7 +24,7 @@
                 "teams":["Egypte","Uruguay"],
                 "tv":["beIN Sports 1"],
                 "match" : "2",
-                "score": []
+                "score": [0,1]
             },
             {
                 "date" : "19 06 2018",
@@ -80,7 +80,7 @@
                 "teams":["Maroc","Iran"],
                 "tv":["beIN Sports 1"],
                 "match" : "3",
-                "score": []
+                "score": [0,1]
             },
             {
                 "date" : "15 06 2018",
@@ -145,7 +145,7 @@
                 "teams":["France","Australie"],
                 "tv":["TF1", "beIN Sports 1"],
                 "match" : "5",
-                "score": []
+                "score": [2,1]
             },
             {
                 "date" : "16 06 2018",
@@ -154,7 +154,7 @@
                 "teams":["Pérou","Danemark"],
                 "tv":["beIN Sports 1"],
                 "match" : "6",
-                "score": []
+                "score": [0,1]
             },
             {
                 "date" : "21 06 2018",
@@ -175,7 +175,7 @@
                 "score": []
             },
             {
-                "date" : "16 06 2018",
+                "date" : "26 06 2018",
                 "hour" : "17h00 heure locale (16H à Paris)",
                 "location" : "Stade Loujniki, Moscou",
                 "teams":["Danemark","France"],
@@ -210,7 +210,7 @@
                 "teams":["Argentine","Islande"],
                 "tv":["beIN Sports 1"],
                 "match" : "7",
-                "score": []
+                "score": [1,1]
             },
             {
                 "date" : "16 06 2018",
@@ -219,7 +219,7 @@
                 "teams":["Croatie","Nigéria"],
                 "tv":["TF1","beIN Sports 1"],
                 "match" : "8",
-                "score": []
+                "score": [2,0]
             },
             {
                 "date" : "21 06 2018",
@@ -275,7 +275,7 @@
                 "teams":["Serbie","Costa Rica"],
                 "tv":["beIN Sports 1"],
                 "match" : "9",
-                "score": []
+                "score": [1,0]
             },
             {
                 "date" : "17 06 2018",
@@ -340,7 +340,7 @@
                 "teams":["Allemagne","Mexique"],
                 "tv":["TF1","beIN Sports 1"],
                 "match" : "11",
-                "score": []
+                "score": [0,1]
             },
             {
                 "date" : "18 06 2018",

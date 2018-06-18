@@ -12,7 +12,7 @@ var getCountryFromIntent = function(country){
   for(var i in countries){
       if(country.toLowerCase().indexOf(countries[i].toLowerCase())!=-1){
           // pays trouvé
-          console.log("trouvé")
+          console.log("trouvé country " + countries[i])
           return countries[i];
       }
   };
@@ -162,12 +162,14 @@ const HomManyMatchesLeft = {
     if(request.intent.slots && request.intent.slots.country && 
         request.intent.slots.country.value){
         country = getCountryFromIntent(request.intent.slots.country.value);
+        console.log("found country " + country);
     }
     let msg;
     if(!country){
-      msg = messages.nbMatchLeftMessage(messages.NbMatches - matchFinder.getPassedMatches());
+      msg = messages.nbMatchLeftMessage(messages.NbMatches - matchFinder.getPassedMatches().length);
     } else {
       let matches = matchFinder.getFuturMatches(country);
+      console.log(JSON.stringify(matches));
       msg = messages.nbMatchForCountryMessage(country, matches.length);
     }
   
@@ -233,7 +235,7 @@ const Score = {
     const request = handlerInput.requestEnvelope.request;
     let country = null;
     let country2 = null;
-    console.log("recherche des pays")
+    console.log("Hande score");
     if(request.intent.slots && request.intent.slots.country && 
       request.intent.slots.country.value){
         country = getCountryFromIntent(request.intent.slots.country.value);

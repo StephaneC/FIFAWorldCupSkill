@@ -3,12 +3,14 @@ const groups = require('./data/groups.json')
 
 var checkTeamName = function(country, match){
     if(country) {
-        if(customIndexOf(match.teams, country) != -1){
+        if(match.teams[0].toLowerCase() == country.toLowerCase() ||
+            match.teams[1].toLowerCase() == country.toLowerCase()){
             return match;
         }
     } else {
         return match;
     }
+    return undefined;
 }
 
 var getAllMatches = function(){
@@ -24,12 +26,12 @@ var getFuturMatches = function(country){
     let d = moment();
     let futur = [];
     matches.forEach(function(m){
-        if(moment(m.date, "DD MM YYYY").isSameOrAfter(d, 'hour')){
-            let found = checkTeamName(country, m)
-            if(found){
-                futur.push(found);
-            }
-        }    
+        if(checkTeamName(country, m)){
+            if(moment(m.date, "DD MM YYYY").isSameOrAfter(d, 'hour')){
+                console.log("found futur match for " + country + " -- " + JSON.stringify(m));
+                futur.push(m);                
+            } 
+        }       
     });
     return futur; 
 }
@@ -39,13 +41,13 @@ var getPassedMatches = function(country){
     let d = moment();
     let passed = [];
     matches.forEach(function(m){
-        if(moment(m.date, "DD MM YYYY").isBefore(d, 'hour')){
-            let found = checkTeamName(country, m)
-            if(found){
-                passed.push(found);
-            }        
-        }    
+        if(checkTeamName(country, m)){
+            if(moment(m.date, "DD MM YYYY").isBefore(d, 'hour')){
+                passed.push(m);
+            }
+        }           
     });
+    console.log("getPassedMatches " + passed.length);
     return passed; 
 }
 
